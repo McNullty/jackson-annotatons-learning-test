@@ -34,6 +34,7 @@ class UpdateUserDtoTest {
     mapper.enable(SerializationFeature.WRAP_ROOT_VALUE);
     final String result = mapper.writeValueAsString(user);
 
+    assertEquals("{\"user\":{\"firstName\":\"firstName\",\"lastName\":\"lastName\"}}", result);
     System.out.println(result);
   }
 
